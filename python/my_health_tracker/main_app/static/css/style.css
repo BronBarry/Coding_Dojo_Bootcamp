@@ -1,0 +1,103 @@
+*{
+    /* background-image: url("/static/img/surgeons.jpg");
+    background-size: 970px; */
+}
+.container{
+    display: block;
+    justify-content: start;
+    width: 970px;
+    min-height: 500px;
+    font-family: sans-serif;
+
+ }
+ .container span{
+     font-weight: bold;
+ }
+ .appt_container{
+    display: flex;
+    justify-content: flex-start;
+    width: 1065px;
+    min-height: 400px;
+    font-family: sans-serif;
+
+ }
+ .loginContainer{
+     display: flex;
+     justify-content: space-evenly;
+     width: 800px;
+ }
+ .add_appt{
+     width: 382px;
+     text-align: left;
+    margin: 0px 32px;
+
+ }
+ textarea {
+    width: 300px;
+    height: 150px;
+  }
+ .add_dr{
+    width: 382px;
+    text-align: left;
+
+ }
+ .header{
+     display: flex;
+     justify-content: start;
+     width: 850px;
+     margin: 0px 0px 0px 75px;
+ }
+ .container table{
+     text-align: left;
+     width: 100%;
+ }
+ /* .registration{
+     border: 2px solid black;
+ } */
+ .register_header{
+     text-align: center;
+ }
+ .login_header{
+     text-align: center;
+ }
+ /* .login{
+     border: 2px solid black;
+ } */
+ .loginIMG{
+     width: 200px;
+     align-items: left;
+ }
+ .dash_header{
+    text-align: left;
+     width: 700px;
+ }
+ .appt{
+     border: 1px solid black;
+     text-align: left;
+     border-collapse: collapse;     
+     /* table-layout: auto; */
+     width: 80%;  
+ }
+ .appt th{
+     background-color: lightgray;
+     border-right: 1px solid black;
+ }
+ .appt td{
+     border-right: 1px solid black;
+ }
+ .appt tr:nth-child(even){
+     background-color: #f2f2f2;
+ }
+ .table_look{
+     width: 700px;
+
+ }
+ /* .bottom{
+     display: flex;
+     justify-content: space-evenly;
+ } */
+ footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+  }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+       <!-- NAV BAR -->
+       <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">myHealth</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/dashboard">Home</a></li>
+              <li><a href="/appointment">Add Appointments and Doctors</a></li>
+              <li><a href="/health">Health details</a></a></li>
+              <li><a href="/resources">Resources</a></li>
+            </ul>
+            
+            <!-- SEARCH BAR -->
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group input-group">
+                <input type="text" class="form-control" placeholder="Find a doctor..">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                      <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </span>        
+              </div>
+            </form>
+            <!-- END OF SEARCH BAR -->
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/profile"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+              <li><a href="/logout">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    
+    <!-- END OF NAV BAR -->
+    <div class="container">
+
+        <div class="col-sm-12">
+            <div class="well">
+                  <div class="resources">
+                      <h3><a href="https://www.nih.gov/" target = “_blank”>1. National Institutes of Health</a></h3> <p>The NIH is the largest source of funding for medical research globally. The site has a wide array of information on almost all known diseases. You will be hard pressed to find a site online with more up to date healthcare data than this one. Besides that, to ensure the authenticity of its data, references are often included for renowned scientific journals.</p> 
+     <h3><a href="https://www.webmd.com/default.htm" target = “_blank”>2. WebMD</a></h3> <p>The site is written specifically with the American audience in mind. However, it does offer a full range of treatment options offered for almost all known medical conditions. The site also often reports on recent health news but in an objective manner. It will often reference studies and seek different opinions on any new medical information. It also offers a practical approach to medical treatment. For instance, it will suggest questions that you may ask your doctor for common medical issues such as diabetes and cholesterol.</p> 
+     <h3><a href="https://www.drugs.com/" target = “_blank” >3. Drugs.com</a></h3> <p>The site proudly proclaims that it is the most comprehensive source of up to date source of facts on drugs. The site presents facts and data on 24,000 prescription drugs. The aim of the data it provides is to help patients understand how their medication works, the side effects and how it interacts with other drugs. </p>
+     <h3><a href="https://www.mayoclinic.org/" target = “_blank”>4. Mayo Clinic</a></h3> <p>The site is best for those who wish to learn more about treatment options ranging from medical to lifestyle treatments. It often goes into detail about medical conditions and the treatment options used. In some cases, there are videos and animations that help to explain tough concepts such as LASIK eye surgery.</p>
+     <h3><a href="https://kidshealth.org/" target = “_blank”>5. KidsHealth</a></h3> <p>This site bills itself that the go-to site for children’s health issues on the internet. The site has four different sections; advice for parents, homework help for children, teaching aids for educators, and advice for teenagers.  
+         
+    <h3><a href="https://www.cdc.gov/" target = “_blank” >6. CDC</a></h3> <p>CDC.gov is a site run by the Centers for Disease Control and Prevention. The site provides access to important safety and health topics. You can also find statistics and data, scientific articles, various resources, tool, and over 900 medical-related topics on the index.</p> <p>The site is committed to disseminating reliable health facts to the masses to help improve people’s health. It utilizes research to improve the daily lives of people. It also often disseminates information on any health emergencies.</p> <p>You will find various detailed strategies on disease prevention and control. It also guards against transmission of diseases outside the US. When traveling to a foreign region, it would be worth checking it out on the CDC site. You will find the types of shots you need to take and what measures you may take to avoid infectious diseases common to the region.</p> 
+    
+    <h3><a href="https://www.cancer.org/" target = “_blank” >7. American Cancer Society</a></h3> <p>Cancer.org is a site run by the American Cancer Society. The mission of the ACS is to save lives and lead the fight in a world free of cancer. As it has become well know, when cancer strikes, it often strikes from all sides. Thus, this site was created to lead the fight in cancer from all sides in the US and globally.</p> <p>The site presents facts for healthcare experts to assist them to fight cancer better. It also provides support to cancer patients. For instance, you will find details on the side effects of treatment and the various treatment options.</p> 
+    
+    <h3><a href="https://www.healthline.com/" target = “_blank”>8. Healthline</a></h3> <p><a href="https://www.healthline.com/" >Healthline.com</a> is a site run by Healthline Media. It is one of the top health information websites and it has recorded significant growth in the recent past. The site is able to reach tens of millions of people globally each month.</p> 
+    
+     <p><a href="https://www.rxlist.com/" target = “_blank” data-elementor-open-lightbox="" rel="noopener"><br /> </a></p> <h3><a href="https://www.rxlist.com/" rel="noopener">9. RxList</a></h3> <p>RxList is a medical website that is dedicated to offering details and information about generic and brand drugs. <p>Doctors and pharmacists write all the information offered on this site. Besides that, the information is often reviewed and updated to ensure that it is as accurate as possible at all times.  The goal is to provide beneficial and accurate data and it does everything it can to ensure that it achieves it.</p> 
+     
+     <p><a href="https://www.rxlist.com/" target = “_blank” data-elementor-open-lightbox="" rel="noopener"><br /> </a></p> <h3><a href="https://www.ama-assn.org/" rel="noopener">10. American Medical Association</a></h3> <p>The American Medical Association was founded in 1847. It is the largest associations of DOs, MDs, and medical students in the US. Their mission is to promote medicine, science, and betterment of public health. It is also behind the Journal of the American Medical Association.</p> <p>The medical website provides both medical advocacy and advice to visitors. For instance, the association has been open against harsh verbal discipline or punishment. It also talks about other issues affecting the US such as the marketing of opioids amidst the current opioid epidemic. Most of the information found on the site is related to policy and management of practices. In short, it aims to help physicians work better and stay abreast of what is going on in the industry.</p> 
+              </div>
+          </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+                <footer class="container-fluid text-center">
+                    <p>Disclaimer | Privacy | Terms & Conditions </p>
+                    <p> Copyright © 2021 myHealth Laboratory, LLC. All Rights Reserved. </p>
+                   
+                  </footer>
+                </body>
+</html>

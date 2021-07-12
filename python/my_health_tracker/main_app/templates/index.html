@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myHealth</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+         <!-- NAV BAR -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Wecome</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+            <!-- END OF NAV BAR -->
+
+
+        <div class="header">        
+            <img src="{% static 'img/logo.jpg' %}" class='loginIMG'/>
+        </div>    
+
+        <div class="loginContainer">
+        <div class="registration">
+        <table>
+            <tr><form action="/register" method="post">
+                {% csrf_token %}
+                <td class="register_header"> <img src="{% static 'img/register.jpg' %}" width="150px"/> </td>
+            <tr>
+                <td>First Name <input type="text" name="first_name" id=""></td>
+            <tr>
+                <td>Last Name <input type="text" name="last_name" id=""></td>
+            <tr>
+                <td>Email <input type="text" name="email" id=""></td>
+            </tr>
+            <tr>
+                <td>Date of Birth <input type="date" name="dob" id=""></td>
+            </tr>
+            <tr> 
+                <td>Password <input type="password" name="password" id=""></td>
+            </tr> 
+            <tr> 
+                <td>Confirm PW <input type="password" name="confirm_password" id=""></td>
+            <tr>
+                <td><button>Register</button></td>
+            </tr>
+            </tr> 
+            
+        </form>
+        </table>
+        </div>                       
+                            <!-- ERROR MESSAGES -->
+            <div class="error">
+            {% if messages %}
+                <ul class="messages">    
+                {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+                {% endfor %}
+                </ul>
+            {% endif %}
+                </div>
+
+        <div class="login">
+        <table >
+            <form action="/login" method="post">
+                {% csrf_token %}
+            <tr>
+                <td class="login_header"><img src="{% static 'img/login.jpg' %}" width="100px"/></td>
+            </tr>
+                <td>Email <input type="text" name="email" id=""></td>
+            </tr>
+            </tr>
+            <tr>
+                <td>Password <input type="password" name="password" id=""></td>
+            <tr> 
+                <td><button>Log In</button></td>
+            </tr>
+            </tr>
+            </form>
+        </table>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <p>Disclaimer | Privacy | Terms & Conditions </p>
+        <p> Copyright © 2021 myHealth Laboratory, LLC. All Rights Reserved. </p>
+       
+      </footer>
+</body>
+</html>

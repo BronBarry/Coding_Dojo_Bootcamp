@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+       <!-- NAV BAR -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">myHealth</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/dashboard">Home</a></li>
+              <li><a href="/appointment">Add Appointments and Doctors</a></li>
+              <li><a href="/health">Health details</a></a></li>
+              <li><a href="/resources">Resources</a></li>
+            </ul>
+            
+            <!-- SEARCH BAR -->
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group input-group">
+                <input type="text" class="form-control" placeholder="Find a doctor..">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                </span>        
+              </div>
+            </form>
+            <!-- END OF SEARCH BAR -->
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/profile"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+              <li><a href="/logout">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+            <!-- END OF NAV BAR -->
+
+    <div class="container">
+        <div class="col-sm-9">
+            <div class="well">
+
+                
+                <table>
+                    <tr>
+                        <td>
+            <p><span> Name: </span>{{logged_in_user.first_name}} {{logged_in_user.last_name}}</p>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><span> Email: </span>{{logged_in_user.email}} | <a href="#">Update <span class="glyphicon glyphicon-envelope"></span></a> </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span> Doctors: </span> <a href="#"><span class="glyphicon glyphicon-user"></span> Add</a>
+            </td>  
+        </tr>
+        
+        {% for doctor in logged_in_user.doctors.all %}
+        <tr>
+            <td>
+            <p>{{doctor.dr_name}}, Hospital: {{doctor.hospital_name}} </p>
+            </td>
+        </tr>
+        
+        {% endfor %}
+        <br>
+        <tr>
+            <td>            
+         
+            <p><span>Emergency Contacts:</span>    <a href="#"><span class="glyphicon glyphicon-user"></span> Add</a> </p>
+                    </td>
+                </tr>
+
+            </table>
+      
+                  </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <footer class="container-fluid text-center">
+        <p>Disclaimer | Privacy | Terms & Conditions </p>
+        <p> Copyright © 2021 myHealth Laboratory, LLC. All Rights Reserved. </p>
+       
+      </footer>
+</body>
+</html>
